@@ -23,11 +23,11 @@ def generate_countdown_image():
     hours, rem = divmod(remaining.seconds, 3600)
     minutes, seconds = divmod(rem, 60)
 
-    img = Image.new("RGBA", (600, 180), TRANSPARENT)
+    img = Image.new("RGBA", (1200, 360), TRANSPARENT)
     draw = ImageDraw.Draw(img)
 
-    font_number = load_font(40, bold=True)
-    font_label = load_font(14)
+    font_number = load_font(80, bold=True)
+    font_label = load_font(28)
 
     boxes = [
         ("Days", f"{days:02}"),
@@ -36,11 +36,11 @@ def generate_countdown_image():
         ("Seconds", f"{seconds:02}")
     ]
 
-    box_w, box_h = 100, 90
-    gap = 18
+    box_w, box_h = 200, 180
+    gap = 36
     start_x = (img.width - (box_w * 4 + gap * 3)) // 2
-    y_box = 20
-    radius = 22
+    y_box = 40
+    radius = 40
 
     for i, (label, value) in enumerate(boxes):
         x = start_x + i * (box_w + gap)
@@ -74,3 +74,4 @@ def generate_countdown_image():
 
 if __name__ == "__main__":
     generate_countdown_image()
+
