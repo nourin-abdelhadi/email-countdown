@@ -74,3 +74,6 @@ def generate_countdown_image():
 
 if __name__ == "__main__":
     generate_countdown_image()
+
+img.save("timer-email.png", optimize=True)
+
