@@ -26,7 +26,7 @@ def generate_countdown_image():
     img = Image.new("RGBA", (1200, 360), TRANSPARENT)
     draw = ImageDraw.Draw(img)
 
-    font_number = load_font(100, bold=True)
+    font_number = load_font(10, bold=True)
     font_label = load_font(55)
 
     boxes = [
@@ -74,5 +74,6 @@ def generate_countdown_image():
 
 if __name__ == "__main__":
     generate_countdown_image()
+
 
 
