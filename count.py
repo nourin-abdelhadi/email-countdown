@@ -35,7 +35,7 @@ def generate_countdown_image():
     draw = ImageDraw.Draw(img)
 
     font_big = load_font(80, bold=True)
-    font_small = load_font(24)
+    font_small = load_font(40)
 
     boxes = [
         ("Days", f"{days:02}"),
@@ -82,3 +82,4 @@ def generate_countdown_image():
 
 if __name__ == "__main__":
     generate_countdown_image()
+
