@@ -1,22 +1,19 @@
 # Email Countdown Timer Generator
 
-A lightweight Python script that generates a **branded countdown timer** for email campaigns.
+A Python script that generates a **countdown timer** for email sends.
 
 It outputs:
 - An **animated GIF** (30 seconds total, 500ms per frame)
 - A **static PNG fallback** (first frame)
 
-Built for email use where animated image support varies across clients.
-
 
 ## Features
 
-- Countdown to a fixed UTC deadline
+- Countdown to a deadline
 - Days / Hours / Minutes / Seconds layout
 - Rounded boxes with UWGT colors
 - Uses **Avenir** font (with fallback)
 - Transparent background
-- Email-safe dimensions
 - PNG fallback in case GIF fails
 
 
@@ -41,7 +38,7 @@ Built for email use where animated image support varies across clients.
 
 ## Requirements
 
-- Python **3.9+**
+- Python 3.9+
 - Pillow (PIL)
 
 Install dependencies:
@@ -77,7 +74,7 @@ Animation Settings
 - Total duration: 30 seconds
 - Frame interval: 500ms
 - Total frames: 60
-- duration=500  (milliseconds per frame)
+- duration: 500  (milliseconds per frame)
 
 ## Usage
 
@@ -100,11 +97,11 @@ src="https://nourin-abdelhadi.github.io/email-countdown/timer-email.gif"
 alt="Countdown timer" width="600" style="display:block;">
 ```
 
-
-For email clients that do not support GIF animation, the static PNG fallback will be displayed automatically.
+For email clients that don't support GIF animation, the PNG will be displayed instead.
 
 ## Important Notes
 - Countdown values are calculated at render time, not live.
 - Animated GIF timers do not update in real time once sent.
+- Timer will update every 5 minutes through workflow_dispatch event trigger.
+- GIF will update every time the email is opened.
 - Transparency allows the timer to be placed on any email background.
-- Optimized for common email client rendering limitations.
