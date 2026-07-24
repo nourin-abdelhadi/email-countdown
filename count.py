@@ -5,7 +5,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FONT_DIR = os.path.join(BASE_DIR, "fonts")
 
-deadline = datetime(2025, 12, 31, 23, 59, tzinfo=timezone.utc)
+deadline = datetime(2026, 9, 1, 0, 0, tzinfo=timezone.utc)
 
 RED = (218, 41, 28, 255)
 WHITE = (255, 255, 255, 255)
