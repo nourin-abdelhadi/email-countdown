@@ -2,7 +2,7 @@ name: Update countdown image
 
 on:
   schedule:
-    - cron: "*/2 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 jobs:
